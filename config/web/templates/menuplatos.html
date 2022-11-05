@@ -31,8 +31,9 @@
                 </div>
                 <div class="col-12 col-md-5">
                     <h2>REGISTRO DE PLATOS</h2>
-                    <form>
+                    <form method="post">
                         {{formulario}}
+                        {% csrf_token %}
                         <button type="submit" class="btn btn-primary w-100">Enviar</button>
                     </form>
                 </div>
