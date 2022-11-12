@@ -16,7 +16,7 @@ class FormularioEmpleados(forms.Form):
         max_length=5,
         widget=forms.TextInput(attrs={'class':'form-control mb-3'})
     )
-    apellidos=forms.CharField(
+    apellido=forms.CharField(
         required=True,
         max_length=20,
         widget=forms.TextInput(attrs={'class':'form-control mb-3'})
