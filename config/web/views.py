@@ -59,9 +59,14 @@ def PlatosVista(request):
     return render(request,'menuplatos.html',data)
 
 def EmpleadosVista(request):
+
+    empleadosConsultados=Empleados.objects.all()
+    print(empleadosConsultados)
+
     formulario=FormularioEmpleados()
     data={
-        'formulario':formulario
+        'formulario':formulario,
+        'platos':empleadosConsultados
     }
     if request.method=="POST":
         datosFormulario=FormularioEmpleados(request.POST)
